@@ -126,5 +126,9 @@ int clkAndEvaluate(uint32_t num_keys, uint32_t *keys, uint32_t *values, uint32_t
     // cudaDeviceSynchronize();
     // finish = clock();
     printf("Finished Find, time = %lf secs\n", find_s);
+    cudaFree(g_keys);
+    cudaFree(g_values);
+    free(keys);
+    free(values);
     return 0;
 }
