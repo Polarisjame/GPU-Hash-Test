@@ -54,12 +54,12 @@ void generate_uniform_unique_pairs(std::vector<key_type>& keys,
     }
   }
   std::random_device rd;
-  std::mt19937 rng(seed);
-  auto max_key = std::numeric_limits<key_type>::max() - 1;
-  std::uniform_int_distribution<key_type> uni(min_key, max_key);
+  std::mt19937 rng(seed); //生成伪随机数引擎, 种子为seed
+  auto max_key = std::numeric_limits<key_type>::max() - 1; 
+  std::uniform_int_distribution<key_type> uni(min_key, max_key); //生成区间为min-max随机数字的对象
   std::unordered_set<key_type> unique_keys;
   while (unique_keys.size() < num_keys) {
-    unique_keys.insert(uni(rng));
+    unique_keys.insert(uni(rng)); //随机生成范围内数字插入
     // unique_keys.insert(unique_keys.size() + 1);
   }
   std::copy(unique_keys.cbegin(), unique_keys.cend(), keys.begin());

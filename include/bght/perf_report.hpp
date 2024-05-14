@@ -23,6 +23,9 @@ void std_cout_perf_report(float insertion_s,
   std::cout << "inserted: " << num_insertions << " keys" << '\n';
   std::cout << "finds: " << num_finds << " keys" << '\n';
 
+  std::cout << "insertion time: " << insertion_s << std::endl;
+  std::cout << "find time: " << find_s << std::endl;
+
   double insertion_rate = double(num_insertions) * 1e-6 / insertion_s;
   double find_rate = double(num_finds) * 1e-6 / find_s;
 

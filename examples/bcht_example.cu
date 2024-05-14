@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
 
   std::vector<key_type> h_keys;
   std::vector<key_type> h_values;
-  rkg::generate_uniform_unique_pairs(h_keys, h_values, num_keys);
+  rkg::generate_uniform_unique_pairs(h_keys, h_values, num_keys, true);
 
   thrust::device_vector<key_type> d_keys(num_keys);
   thrust::device_vector<pair_type> d_pairs(num_keys);

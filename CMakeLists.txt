@@ -9,8 +9,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 
 # options
-option(build_benchmarks "Build benchmarks" ON)
-option(build_tests "Build tests" ON)
+option(build_benchmarks "Build benchmarks" OFF)
+option(build_tests "Build tests" OFF)
 option(build_examples "Build examples" ON)
 
 # Direct all output to /bin directory

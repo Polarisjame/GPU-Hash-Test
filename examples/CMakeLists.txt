@@ -4,14 +4,14 @@ function(add_bght_example target_name source_file)
 endfunction()
 
 set(example_targets
-    array_example
-    custom_allocator_example
-    1cht_example
+    # array_example
+    # custom_allocator_example
+    # 1cht_example
     bcht_example
-    custom_types_example
-    iht_example
-    hash_join
-    histogram
+    # custom_types_example
+    # iht_example
+    # hash_join
+    # histogram
     )
 
 foreach(target ${example_targets})
